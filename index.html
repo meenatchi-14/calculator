@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="stylesheet" href="sytle.css">
+</head>
+<body>
+	
+       
+	<table id="calculator"class="container">
+		<tr>
+			<td colspan="4"><input type="text" id="display" readonly>
+		</td></tr>
+		<tr>
+            <td><button onclick="clearDisplay()" value="c" class="cancel later m-4 " >C</button></td>
+			<td><svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short m-5 arrow" onclick="clearDisplay()" viewBox="0 0 16 16">
+				<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+			  </svg></td>
+			<td><button onclick="appendToDisplay('.')" value="." class="button later m-4">.</button></td>
+			<td><button onclick="appendToDisplay('*')"  value="*" class="button later m-4">*</button></td>
+		</tr>
+
+		<tr>
+			<td><button onclick="appendToDisplay('7')"  value="7" class="number later m-4">7</button></td>
+			<td><button onclick="appendToDisplay('8')"  value="8" class="number later m-4">8</button></td>
+			<td><button onclick="appendToDisplay('9')"  value="9" class="number later m-4">9</button></td>
+            <td><button onclick="appendToDisplay('/')"  value="/" class="button later m-4 ">/</button></td>
+			
+			
+		</tr>
+        <td><button onclick="appendToDisplay('4')" value="4" class="number later m-4">4</button></td>
+        <td><button onclick="appendToDisplay('5')"  value="5" class="number later m-4">5</button></td>
+        <td><button onclick="appendToDisplay('6')"  value="6"class="number later m-4">6</button></td>
+		<td><button onclick="appendToDisplay('-')"  value="-" class="button later m-4 ">-</button></td>	
+			
+            <tr>
+            <td><button onclick="appendToDisplay('1')"  value="1" class="number later m-4">1</button></td>
+			<td><button onclick="appendToDisplay('2')"  value="2" class="number later m-4">2</button></td>
+			<td><button onclick="appendToDisplay('3')" value="3" class="number later m-4">3</button></td>
+            <td><button onclick="appendToDisplay('+')"  value="+"class="button later m-4" >+</button></td>
+        </tr>
+        <tr>
+			<td><button onclick="appendToDisplay('0')" value="0" class="number later m-4">0 </button></td>
+			<td><button onclick="appendToDisplay('00')" value="00" class="number later m-4">00</button></td>
+			<td colspan="2"> <button onclick="calculateResult()" value="=" class="button equal m-4">=</button> </td>
+		</tr>
+	</table>
+	<script src="script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
